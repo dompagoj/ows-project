@@ -8,7 +8,6 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
 @Component({
   components: {
     HelloWorld,
@@ -16,3 +15,21 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 })
 export default class Home extends Vue {}
 </script>
+
+<template>
+</template>
+
+
+<script lang="ts">
+  import Vue from 'vue'
+  
+  export default Vue.extend({
+  
+  })
+</script>
+
+
+<style scoped lang="sass">
+
+
+</style>
