@@ -6,7 +6,6 @@ body {
   padding: 0;
   font-size: 12px;
   word-spacing: 0;
-  word-break: break-word;
   background: #1d2030 radial-gradient(#456, #1d2030);
 }
 
@@ -26,7 +25,7 @@ body {
   overflow-y: auto;
   height: 100%;
   width: 100%;
-  min-width: 350px;
+  min-width: 960px;
 }
 
 @media (min-width: 850px) and (orientation: landscape) {
@@ -55,4 +54,28 @@ body {
 }
 .text {
   margin: 1em;
+}
+
+.wrapper {
+  margin: $defaultMargin;
+  padding-bottom: 50px;
+  animation: popIn 0.6s;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #209cee;
+  box-shadow: inset -4px -4px $lightBlue;
+}
+
+.btn-primary:hover {
+  background-color: #108de0;
+  box-shadow: inset -6px -6px #006bb3;
+}
+.btn-primary:active {
+  box-shadow: inset 4px 4px #006bb3;
+}
+
+.input {
+  margin: 0;
 }

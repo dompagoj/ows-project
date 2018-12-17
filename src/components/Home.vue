@@ -2,8 +2,8 @@
   <div class="border">
     <div class="main-container">
       <div class="logo-container">
-        <img @click="goToReadme" class="logo" src="../assets/logo.png" alt>
-        <div class="text">[ Solve the ridle to enter ]</div>
+        <img @click="goToReadme" class="logo" src="../assets/logo-custom.png" alt>
+        <div class="text">[ Solve the riddle to enter ]</div>
         <div v-if="$mq === 'sm'" @click="sneakyClue" class="sneaky"/>
         <div v-if="displayFinal" class="finalRiddle">
           <p class="balloon from-right">There was a storage and it was local,
@@ -24,6 +24,7 @@ export default Vue.extend({
   name: 'home',
   created() {
     console.log('Hello, fellow developer!')
+    console.log('Here\'s your clue: \n', 'window.letMeIn = () => {...}')
     // @ts-ignore
     window.letMeIn = () => {
       console.log('When the screen gets really small, things become clickable?')
@@ -65,7 +66,7 @@ export default Vue.extend({
   }
   .text {
     position: relative;
-    top: -80px;
+    top: -120px;
   }
   .sneaky {
     position: absolute;

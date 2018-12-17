@@ -3,15 +3,33 @@
     <div class="header">FAQ</div>
     <div
       class="text"
-    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nulla fugiat. Error maxime consectetur minus incidunt doloribus? Sapiente aliquam dolorem vel saepe molestiae nam, voluptatum exercitationem minima maxime. Explicabo, aspernatur?</div>
+    >
+      <div>How many people are allowed per team?</div>  
+      <div class="answer">3-5 people per team.</div>
+    </div>
     <div
       class="text"
-    >Lorem ipsum dolor, sit amet consectetur adipisicing elit. At fugiat odio similique officia, ducimus doloribus. Doloremque, dolorum mollitia porro animi nesciunt aliquam, quam odio architecto reprehenderit aspernatur impedit nulla quia!</div>
+    >
+      <div class="question">What programming languages are allowed?</div>
+      <div class="answer">Any programming language is allowed!</div>
+    </div>
     <div
       class="text"
-    >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis libero veniam sit suscipit quaerat? Optio.</div>
-    <div class="text">Lorem ipsum dolor sit amet.</div>
+    >
+    <div class="question">How long do the rounds last?</div>
+    <div class="answer">Every round lasts 12hours, but the final round is a 24 hour marathon</div>
+    </div>
+
     <div class="header">Begginers</div>
+    <div
+      class="text"
+    >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut iure temporibus consectetur qui nihil tenetur autem officiis distinctio rem facilis.</div>
+    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, illum.</div>
+    <div
+      class="text"
+    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur voluptates maiores eligendi perspiciatis minus enim, omnis, corporis quidem tempora, modi natus quas culpa temporibus. Quo, quas distinctio. Culpa, harum.</div>
+
+    <div class="header">Challenges</div>
     <div
       class="text"
     >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut iure temporibus consectetur qui nihil tenetur autem officiis distinctio rem facilis.</div>
@@ -29,11 +47,8 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped>
-@import "../variables.scss";
-.wrapper {
-  margin: $defaultMargin;
-  padding-bottom: 50px;
-  animation: popIn 0.6s;
-}
+<style lang="scss">
+  .answer {
+    padding-left: 15px;
+  }
 </style>

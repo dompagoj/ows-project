@@ -82,18 +82,21 @@ export default Vue.extend({
   }
 }
 
-.nav-item {
-  border-radius: 50%;
-  /* box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.2); */
-}
-
 .nav-item:hover {
   cursor: pointer;
-  border-bottom: 2px solid #4481e7;
+  /* border-bottom 2px solid #4481e7; */
 }
 
 .active {
-  border-bottom: 2px solid #4481e7;
+  /* border-bottom: 2px solid #4481e7; */
+  text-shadow: 0 0 3ex #fff;
+  animation: textGlow 1s alternate-reverse infinite;
+}
+
+@keyframes textGlow {
+  to {
+    text-shadow: 0 0 8ex #fff;
+  }
 }
 
 .logo {

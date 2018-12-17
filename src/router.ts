@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from './components/Home.vue'
 import MainLayout from './components/MainLayout.vue'
 import Readme from './components/Readme.vue'
+import Join from './components/Join.vue'
+import Challenges from './components/Challenges.vue'
 import Axios from 'axios'
 
 Vue.use(Router)
@@ -37,12 +39,22 @@ export const router = new Router({
     },
     {
       path: '/*',
-      name: routes.readme,
       component: MainLayout,
       children: [
         {
           path: '/readme',
-          component: Readme
+          name: routes.readme,
+          component: Readme,
+        },
+        {
+          path: '/join',
+          name: routes.join,
+          component: Join,
+        },
+        {
+          path: '/challenges',
+          name: routes.challenges,
+          component: Challenges,
         }
       ]
     }
@@ -69,8 +81,6 @@ router.beforeEach(async (to, from, next) => {
         return next()
       }
     }
-    console.log('Here\'s your clue: ')
-    console.log('%c window.letMeIn = () => {...}', 'color: #ff9900')
 
     return next({ name: routes.home })
   }
