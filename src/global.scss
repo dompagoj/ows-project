@@ -1,0 +1,58 @@
+@import "./variables.scss";
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  word-spacing: 0;
+  word-break: break-word;
+  background: #1d2030 radial-gradient(#456, #1d2030);
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transofrm: scale(1, 1);
+  }
+}
+
+.main-container {
+  background-image: url("assets/background-logo.jpeg");
+  background-size: cover;
+  min-height: 100vh;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  min-width: 350px;
+}
+
+@media (min-width: 850px) and (orientation: landscape) {
+  .border {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 5vh / 50vh;
+    margin: 20px;
+  }
+  .main-container {
+    border-radius: 50vh / 5vh;
+  }
+}
+
+.header {
+  padding: 10px;
+  font-size: 16px;
+  margin: 2em 0;
+  border-bottom: 2px dotted $lightBlue;
+}
+.text {
+  margin: 1em;
+}

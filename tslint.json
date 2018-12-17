@@ -1,15 +1,28 @@
 {
+  "extends": ["tslint:latest", "tslint-config-prettier"],
   "defaultSeverity": "warning",
-  "extends": ["tslint:recommended"],
-  "linterOptions": {
-    "exclude": ["node_modules/**"]
-  },
   "rules": {
     "quotemark": [true, "single"],
+    "eofline": true,
+    "semicolon": [true, "never"],
+    "jsx-boolean-value": false,
+    "no-implicit-dependencies": false,
     "indent": [true, "spaces", 2],
-    "interface-name": false,
-    "ordered-imports": true,
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": false
+    "ordered-imports": false,
+    "jsx-no-lambda": false,
+    "trailing-comma": true,
+    "no-console": false,
+    "newline-before-return": true,
+    "interface-name": false,
+    "arrow-parens": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/",
+      "src/registerServiceWorker.ts",
+      "./config-overrides.js",
+      "public/main.js"
+    ]
   }
 }
