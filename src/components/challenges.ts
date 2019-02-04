@@ -18,6 +18,10 @@ export default {
         name: 'Challenge4',
         points: '250pts'
       },
+      {
+        name: 'Challenge5',
+        points: '300pts'
+      },
     ],
   },
   crypto: {
@@ -38,6 +42,10 @@ export default {
       {
         name: 'Challenge4',
         points: '250pts'
+      },
+      {
+        name: 'Challenge5',
+        points: '300pts'
       },
     ],
   },
@@ -60,6 +68,10 @@ export default {
         name: 'Challenge4',
         points: '250pts'
       },
+      {
+        name: 'Challenge5',
+        points: '300pts'
+      },
     ],
   },
   pwn: {
@@ -81,6 +93,10 @@ export default {
         name: 'Challenge4',
         points: '250pts'
       },
+      {
+        name: 'Challenge5',
+        points: '300pts'
+      },
     ],
   },
   re: {
@@ -101,6 +117,10 @@ export default {
       {
         name: 'Challenge4',
         points: '250pts'
+      },
+      {
+        name: 'Challenge5',
+        points: '300pts'
       },
     ],
   }

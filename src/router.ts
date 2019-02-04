@@ -5,7 +5,9 @@ import MainLayout from './components/MainLayout.vue'
 import Readme from './components/Readme.vue'
 import Join from './components/Join.vue'
 import Challenges from './components/Challenges.vue'
-import Axios from 'axios'
+import CreateTeam from './components/CreateTeam.vue'
+import Scoreboard from './components/Scoreboard.vue'
+import Teams from './components/Teams.vue'
 
 Vue.use(Router)
 
@@ -16,7 +18,8 @@ export const routes = {
   challenges: '/challenges',
   begginer: '/begginer',
   readme: '/readme',
-  join: '/join'
+  join: '/join',
+  createTeam: '/create-team',
 }
 
 Vue.mixin({
@@ -52,9 +55,24 @@ export const router = new Router({
           component: Join,
         },
         {
+          path: '/create-team',
+          name: routes.createTeam,
+          component: CreateTeam,
+        },
+        {
           path: '/challenges',
           name: routes.challenges,
           component: Challenges,
+        },
+        {
+          path: '/scoreboard',
+          name: routes.scoreboard,
+          component: Scoreboard,
+        },
+        {
+          path: '/teams',
+          name: routes.teams,
+          component: Teams,
         }
       ]
     }
@@ -68,13 +86,7 @@ router.beforeEach(async (to, from, next) => {
     }
     const riddleAnswer = localStorage.getItem('riddle')
     if (riddleAnswer) {
-      const { data } = await Axios.post(
-        'https://openwhisk.eu-gb.bluemix.net/api/v1/web/domagoj.zivanovic%40gmail.com_dev/default/riddle.json',
-        {
-          riddleAnswer
-        }
-      )
-      if (data.riddle) {
+      if (riddleAnswer === 'solved') {
         localStorage.setItem('riddleSolved', 'true')
         console.log('%c Congratulations', 'color: #ff9900')
 

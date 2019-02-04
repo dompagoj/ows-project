@@ -25,7 +25,12 @@ body {
   overflow-y: auto;
   height: 100%;
   width: 100%;
-  min-width: 960px;
+  // min-width: 960px;
+}
+
+.border {
+  overflow: hidden;
+  word-break: break-word;
 }
 
 @media (min-width: 850px) and (orientation: landscape) {
@@ -35,9 +40,6 @@ body {
     bottom: 0;
     right: 0;
     left: 0;
-    overflow: hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
     border-radius: 5vh / 50vh;
     margin: 20px;
   }
@@ -50,10 +52,46 @@ body {
   padding: 10px;
   font-size: 16px;
   margin: 2em 0;
-  border-bottom: 2px dotted $lightBlue;
+  border-bottom: 3px dashed $lightBlue;
 }
 .text {
   margin: 1em;
+}
+
+.input {
+  width: 100% !important;
+  color: white;
+  background: transparent;
+  border: 2px solid $lightBlue;
+  box-shadow: rgba(68, 129, 231, 0.5) 0px 0px 30px 3px;
+}
+.input:active {
+  box-shadow: rgba(#fff, 0.5) 0px 0px 30px 3px;
+  border: 2px solid #fff; 
+}
+.input:focus {
+  box-shadow: rgba(#fff, 0.5) 0px 0px 30px 3px;
+  border: 2px solid #fff;
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  color: white;
+  height: 38px;
+  border: 2px solid $lightBlue; 
+  box-shadow: rgba(68, 129, 231, 0.5) 0px 0px 30px -1px;
+  background: transparent;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:active {
+  border: 2px solid white;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 30px -1px;
+}
+.button:focus {
+  outline: none;
 }
 
 .wrapper {
@@ -78,4 +116,11 @@ body {
 
 .input {
   margin: 0;
+}
+
+.disabled {
+  color: gray;
+}
+.disabled:hover {
+  cursor: default !important;
 }

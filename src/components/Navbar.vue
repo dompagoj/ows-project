@@ -15,13 +15,11 @@
       class="nav-item"
       v-bind:class="{ active: isActive(routes.challenges) }"
     >Challenges</div>
-    <div>
+    <div class="nav-item" @click="goTo(routes.home)">
       <img class="logo" src="../assets/logo.png">
     </div>
     <div
-      @click="goTo(routes.begginer)"
-      class="nav-item"
-      v-bind:class="{ active: isActive(routes.begginer) }"
+      class="nav-item disabled"
     >Begginers</div>
     <div
       @click="goTo(routes.readme)"
@@ -69,6 +67,7 @@ export default Vue.extend({
   display: flex;
   flex-shrink: 1;
   justify-content: space-evenly;
+  overflow-y: auto;
   align-items: center;
   margin: $defaultMargin;
 

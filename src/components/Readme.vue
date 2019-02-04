@@ -37,6 +37,8 @@
     <div
       class="text"
     >Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur voluptates maiores eligendi perspiciatis minus enim, omnis, corporis quidem tempora, modi natus quas culpa temporibus. Quo, quas distinctio. Culpa, harum.</div>
+    <div class="header">Rewards</div>
+    <div class="text">Top 5 teams will be rewarded</div>
   </div>
 </template>
 

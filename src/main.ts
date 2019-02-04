@@ -12,11 +12,17 @@ Vue.config.productionTip = false
 
 Vue.use(VueMq, {
   breakpoints: {
-    sm: 450,
-    md: 900,
-    lg: 1250,
-    xl: Infinity
+    small: 1007,
+    full: Infinity,
   }
+})
+
+Vue.directive('hide', {
+  inserted(el, binding) {
+    if (binding.value) {
+      el.style.visibility = 'hidden'
+    }
+  },
 })
 
 new Vue({

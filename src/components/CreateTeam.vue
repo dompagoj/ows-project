@@ -1,17 +1,17 @@
 <template>
   <div class="wrapper">
     <div class="box">
-      <div class="header">Sign in</div>
+      <div class="header">Create new team</div>
       <div class="box-content">
         <div class="field">
-          <label class="field-title">Team secret key</label>
+          <label class="field-title">Team name</label>
           <input type="text" class="input">
         </div>
-          <button class="button">Join a team</button>
+          <button class="button">Create team</button>
       </div>
     </div>
     <div class="text-wrapper">
-      <p @click="goToCreate">Or <span>[ create a new team ]</span></p>
+      <p @click="goToJoin">Or <span>[ Join existing team ]</span></p>
       <p>Or <span>[ buy a ticket to watch ]</span></p>
     </div>
   </div>
@@ -20,10 +20,10 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  name: 'join',
+  name: 'create-team',
   methods: {
-    goToCreate() {
-      this.$router.push('/create-team')
+    goToJoin() {
+      this.$router.push('/join')
     },
   }
 })
@@ -40,9 +40,9 @@ export default Vue.extend({
 .box {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 75px;
   border: 2px solid $lightBlue;
-  box-shadow: rgba(68, 129, 231, 0.5) 0px 0px 15px 3px;
+  box-shadow: rgba(68, 129, 231, 0.5) 0px 0px 85px -1px;
   background: $darkBlue;
 }
 
@@ -59,11 +59,36 @@ export default Vue.extend({
   padding: 0 50px 25px 50px;
 }
 
+.input {
+  width: 100% !important;
+  color: white;
+  background: transparent;
+  border: 2px solid $lightBlue;
+  box-shadow: rgba(68, 129, 231, 0.5) 0px 0px 30px -1px;
+}
+
 .field-title {
   padding-top: 10px;
   color: $lightBlue;
 }
-
+.button {
+  width: 100%;
+  color: white;
+  height: 38px;
+  border: 2px solid $lightBlue; 
+  box-shadow: rgba(68, 129, 231, 0.5) 0px 0px 30px -1px;
+  background: transparent;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:active {
+  border: 2px solid white;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 30px -1px;
+}
+.button:focus {
+  outline: none;
+}
 
 .text-wrapper {
   margin: 25px;
@@ -81,7 +106,6 @@ export default Vue.extend({
     }
   }
 }
-
 @media (max-width: 1265px) {
   .wrapper {
     width: 90%;

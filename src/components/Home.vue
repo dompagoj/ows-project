@@ -3,14 +3,14 @@
     <div class="main-container">
       <div class="logo-container">
         <img @click="goToReadme" class="logo" src="../assets/logo-custom.png" alt>
-        <div class="text">[ Solve the riddle to enter ]</div>
+        <div v-if="!riddleSolved" class="text">[ Solve the riddle to enter ]</div>
+        <div v-else class="text">[ Click the logo to enter ]</div>
         <div v-if="$mq === 'sm'" @click="sneakyClue" class="sneaky"/>
         <div v-if="displayFinal" class="finalRiddle">
           <p class="balloon from-right">There was a storage and it was local,
-            <br>remeber the key is "riddle" and the value:
-            <br>"What word is spelled wrong in every dictionary?"
+            <br>remeber the key is "riddle" and the value: "solved"
           </p>
-          <i class="octocat"/>
+          <i class="octocat" />
         </div>
       </div>
     </div>
@@ -33,6 +33,7 @@ export default Vue.extend({
   data() {
     return {
       displayFinal: false,
+      riddleSolved: !!localStorage.getItem('riddleSolved')
     }
   },
   methods: {
