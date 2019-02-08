@@ -1,39 +1,19 @@
 {
   "name": "ows-project",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "start": "cd server && npm start"
   },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "nes.css": "0.0.2",
-    "vue": "^2.5.17",
-    "vue-mq": "^1.0.1",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dompagoj/ows-project.git"
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-typescript": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
-    "node-sass": "^4.9.0",
-    "prettier": "^1.15.3",
-    "sass-loader": "^7.0.1",
-    "tslint-config-prettier": "^1.17.0",
-    "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.5.17"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dompagoj/ows-project/issues"
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "homepage": "https://github.com/dompagoj/ows-project#readme"
 }
