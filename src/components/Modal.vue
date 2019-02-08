@@ -3,9 +3,6 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-          <!-- <div class="close-button-container">
-            <button class="close-button">X</button>
-          </div>-->
           <div @click="$emit('close')" class="modal-header">
             <span class="title">{{challenge.name}}</span>
             <span class="points">{{challenge.points}}</span>
@@ -60,8 +57,11 @@ export default {
   text-shadow: 0 0 10px white;
 }
 .button {
-  width: 25% !important;
+  width: 45% !important;
+  padding: 0px 25px;
+  box-sizing: border-box;
   margin: 5px 0;
+  vertical-align: middle;
 }
 
 .modal-mask {
@@ -79,11 +79,11 @@ export default {
 .modal-wrapper {
   display: table-cell;
   vertical-align: middle;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .modal-footer {
-  padding: 25px;
+  padding: 0 25px;
   margin-top: auto;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ export default {
 
 .modal-container {
   width: 60vh;
-  height: 60vh;
+  height: 70vh;
   margin: 0px auto;
   background-color: rgba($darkBlue, 0.9);
   border: 1px solid $lightBlue;
@@ -102,18 +102,19 @@ export default {
   font-family: Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .modal-header {
   padding: 15px 30px;
-  font-size: 16px;
+  font-size: 12px;
   margin: 2em 0;
   border-bottom: 3px dashed $lightBlue;
   display: flex;
   align-items: center;
   cursor: pointer;
   margin: 0 !important;
-  font-size: 25px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
 }
@@ -147,7 +148,7 @@ export default {
   display: flex;
   flex: 1;
   justify-content: flex-end;
-  font-size: 30px;
+  font-size: 20px;
 }
 .close-button-container {
   display: flex;

@@ -1,5 +1,9 @@
 @import "./variables.scss";
 
+* {
+  font-family: "Press Start 2P";
+}
+
 body {
   color: white;
   margin: 0;
@@ -119,8 +123,11 @@ body {
 }
 
 .disabled {
-  color: gray;
+  color: gray !important;
 }
 .disabled:hover {
   cursor: default !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }

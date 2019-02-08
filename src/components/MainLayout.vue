@@ -1,9 +1,9 @@
 <template>
   <div class="border">
     <div class="main-container">
-      <navbar v-if="$mq === 'full'"/>
-      <mobile-navbar v-else/>
-      <router-view/>
+      <navbar v-if="$mq === 'full'" />
+      <mobile-navbar v-else />
+      <router-view />
     </div>
   </div>
 </template>
