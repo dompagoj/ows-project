@@ -5,7 +5,7 @@
         <img @click="goToReadme" class="logo" src="../assets/logo-custom.png" alt>
         <div v-if="!riddleSolved" class="text">[ Solve the riddle to enter ]</div>
         <div v-else class="text">[ Click the logo to enter ]</div>
-        <div v-if="$mq === 'sm'" @click="sneakyClue" class="sneaky"/>
+        <div v-if="$mq === 'small'" @click="sneakyClue" class="sneaky"/>
         <div v-if="displayFinal" class="finalRiddle">
           <p class="balloon from-right">There was a storage and it was local,
             <br>remeber the key is "riddle" and the value: "solved"
